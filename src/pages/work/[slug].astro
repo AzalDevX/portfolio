@@ -1,0 +1,181 @@
+---
+import MainLayout from '../../layouts/Layout.astro';
+import portfolioData from '../../data/portfolio.json';
+
+export async function getStaticPaths() {
+  const createSlug = (title) => {
+    return title
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-+|-+$/g, '');
+  };
+
+  const projects = portfolioData.work.projects;
+  return projects.map((project) => ({
+    params: { slug: createSlug(project.title) },
+    props: { project },
+  }));
+}
+
+const { project } = Astro.props;
+
+if (!project) {
+  Astro.redirect('/404');
+}
+---
+
+<MainLayout title={`${project.title} - Gonzalo`}>
+  <section class="project-detail-section section">
+    <div class="container">
+      <div class="section-grid">
+        <h2 class="section-title">Project</h2>
+        <div class="section-content">
+          <h1 class="project-detail-title fade-in">{project.title}</h1>
+          <div class="project-detail-meta fade-in">
+            <span class="project-detail-year">{project.year}</span>
+            <span class="project-detail-tech">{project.technologies}</span>
+          </div>
+
+          <p class="project-detail-description fade-in">
+            {project.longDescription}
+          </p>
+
+          {
+            project.features && project.features.length > 0 && (
+              <div class="project-detail-features fade-in">
+                <h3>Features:</h3>
+                <ul>
+                  {project.features.map((feature) => (
+                    <li>- {feature}</li>
+                  ))}
+                </ul>
+              </div>
+            )
+          }
+
+          <div class="project-detail-links fade-in">
+            {
+              project.liveUrl && (
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-primary">
+                  View Live
+                </a>
+              )
+            }
+            {
+              project.githubUrl && (
+                <a
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn">
+                  GitHub Repo
+                </a>
+              )
+            }
+          </div>
+
+          <div class="back-link fade-in">
+            <a href="/#work" class="btn">&larr; Back to Work</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</MainLayout>
+
+<style>
+  .project-detail-section {
+    padding-top: 10rem; /* Adjust padding to account for sticky navbar */
+  }
+
+  .project-detail-title {
+    font-size: 2.5em;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    color: #000;
+  }
+
+  .project-detail-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    color: #666;
+    font-size: 0.9em;
+  }
+
+  .project-detail-year,
+  .project-detail-tech {
+    background-color: #f0f0f0;
+    padding: 0.3em 0.8em;
+    border-radius: 3px;
+  }
+
+  .project-detail-description {
+    margin-bottom: 3rem;
+    color: #333;
+    font-size: 1em;
+  }
+
+  .project-detail-features {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    color: #333;
+  }
+
+  .project-detail-features h3 {
+    font-size: 1em;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: #000;
+  }
+
+  .project-detail-features ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .project-detail-features li {
+    margin-bottom: 0.5rem;
+    font-size: 0.9em;
+  }
+
+  .project-detail-links {
+    display: flex;
+    gap: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    background: none;
+    border: none;
+    font-family: var(--mono);
+    font-size: 0.9em;
+    color: #666;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    position: relative;
+    padding: 0.2rem 0;
+  }
+
+  .btn:hover {
+    color: #000;
+  }
+
+  .btn-primary {
+    color: #000;
+    border-bottom: 1px solid #000;
+    padding-bottom: 0.2rem;
+  }
+
+  .back-link {
+    margin-top: 4rem;
+  }
+</style>

@@ -1,54 +1,73 @@
-<section id="contact" class="py-32 px-8">
-  <div class="max-w-5xl mx-auto">
-    <div class="grid md:grid-cols-12 gap-20">
-      <div class="md:col-span-4">
-        <h2
-          class="text-xs tracking-[0.3em] uppercase text-gray-400 mb-8 sticky top-32">
-          Contact
-        </h2>
-      </div>
-      <div class="md:col-span-8">
-        <div class="space-y-12">
-          <p class="text-2xl font-light text-gray-600 leading-relaxed">
-            Available for new freelance projects. Let's discuss how we can bring
-            your ideas to life.
-          </p>
-          <div class="space-y-8">
-            <div>
-              <a
-                href="mailto:me@azaldev.com"
-                class="text-2xl hover:text-blue-600 transition-colors duration-500 relative group">
-                me@azaldev.com
-                <span
-                  class="absolute -bottom-1 left-0 w-0 h-px bg-blue-600 transition-all duration-500 group-hover:w-full"
-                ></span>
-              </a>
-            </div>
-            <div class="flex space-x-12 text-sm">
-              <a
-                href="https://lalo.lol/in"
-                target="_blank"
-                class="text-gray-500 hover:text-gray-900 transition-colors duration-500 tracking-widest relative group"
-                rel="noreferrer">
-                LinkedIn
-                <span
-                  class="absolute -bottom-1 left-0 w-0 h-px bg-gray-900 transition-all duration-300 group-hover:w-full"
-                ></span>
-              </a>
-              <a
-                href="https://lalo.lol/gh"
-                target="_blank"
-                class="text-gray-500 hover:text-gray-900 transition-colors duration-500 tracking-widest relative group"
-                rel="noreferrer">
-                GitHub
-                <span
-                  class="absolute -bottom-1 left-0 w-0 h-px bg-gray-900 transition-all duration-300 group-hover:w-full"
-                ></span>
-              </a>
-            </div>
-          </div>
+---
+import portfolioData from '../data/portfolio.json';
+const { contact, personal } = portfolioData;
+---
+
+<section id="contact" class="section">
+  <div class="container">
+    <div class="section-grid">
+      <h2 class="section-title">{contact.title}</h2>
+      <div class="section-content">
+        <p class="contact-message fade-in">{contact.message}</p>
+        <a href={`mailto:${personal.email}`} class="contact-email fade-in"
+          >{personal.email}</a
+        >
+        <div class="contact-social fade-in">
+          <a href={personal.social.linkedin} target="_blank" class="social-link"
+            >LinkedIn</a
+          >
+          <a href={personal.social.github} target="_blank" class="social-link"
+            >GitHub</a
+          >
+          <a href={personal.social.malt} target="_blank" class="social-link"
+            >Malt</a
+          >
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<style>
+  .contact-message {
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 3rem;
+  }
+
+  .contact-email {
+    font-size: 1.2em;
+    color: #000;
+    text-decoration: none;
+    margin-bottom: 2rem;
+    display: inline-block;
+    transition: color 0.3s ease;
+  }
+
+  .contact-email:hover {
+    color: #666;
+  }
+
+  .contact-social {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .social-link {
+    color: #666;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: color 0.3s ease;
+  }
+
+  .social-link:hover {
+    color: #000;
+  }
+
+  @media (max-width: 768px) {
+    .contact-social {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+</style>

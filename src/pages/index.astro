@@ -1,24 +1,111 @@
 ---
+import portfolioData from '../data/portfolio.json';
 import MainLayout from '../layouts/Layout.astro';
-import CursorFollower from '../components/CursorFollower.astro';
-import Navbar from '../components/Navbar.astro';
 import Hero from '../components/Hero.astro';
 import About from '../components/About.astro';
 import Work from '../components/Work.astro';
 import Experience from '../components/Experience.astro';
 import Philosophy from '../components/Philosophy.astro';
 import Contact from '../components/Contact.astro';
-import Footer from '../components/Footer.astro';
+const { personal, navigation, about, work, experience, philosophy, contact } =
+  portfolioData;
 ---
 
 <MainLayout>
-  <CursorFollower />
-  <Navbar />
   <Hero />
   <About />
   <Work />
   <Experience />
   <Philosophy />
   <Contact />
-  <Footer />
+
 </MainLayout>
+
+<style>
+  :root {
+    --lh: 1.5em;
+    --mono: 'JetBrains Mono', 'Courier New', monospace;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--mono);
+    font-size: 1em;
+    line-height: var(--lh);
+    color: #000;
+    background: #fff;
+    font-weight: 300;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .mobile-menu {
+    display: none;
+    background: none;
+    border: none;
+    font-family: var(--mono);
+    font-size: 1em;
+    cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      padding: 0 1rem;
+    }
+
+    .mobile-menu {
+      display: block;
+    }
+  }
+</style>
+
+<script>
+  // Mobile menu toggle
+  const mobileMenuBtn = document.getElementById('mobile-menu');
+  const navLinks = document.querySelector('.nav-links');
+  let isMenuOpen = false;
+
+  mobileMenuBtn.addEventListener('click', () => {
+    isMenuOpen = !isMenuOpen;
+    if (isMenuOpen) {
+      navLinks.style.display = 'flex';
+      navLinks.style.flexDirection = 'column';
+      navLinks.style.position = 'absolute';
+      navLinks.style.top = '100%';
+      navLinks.style.left = '0';
+      navLinks.style.right = '0';
+      navLinks.style.background = 'rgba(255, 255, 255, 0.95)';
+      navLinks.style.backdropFilter = 'blur(10px)';
+      navLinks.style.padding = '2rem';
+      navLinks.style.borderTop = '1px solid #eee';
+      mobileMenuBtn.textContent = 'Close';
+    } else {
+      navLinks.style.display = 'none';
+      mobileMenuBtn.textContent = 'Menu';
+    }
+  });
+
+  // Close mobile menu when clicking on a link
+  document.querySelectorAll('.nav-link').forEach((link) => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth <= 768) {
+        navLinks.style.display = 'none';
+        mobileMenuBtn.textContent = 'Menu';
+        isMenuOpen = false;
+      }
+    });
+  });
+</script>

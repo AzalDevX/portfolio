@@ -1,7 +1,20 @@
-<footer class="py-20 px-8 border-t border-gray-100">
-  <div class="max-w-5xl mx-auto">
-    <div class="text-center text-sm text-gray-400 tracking-widest">
-      Between lines of code, humanity remains.
-    </div>
+---
+import portfolioData from '../data/portfolio.json';
+const { contact } = portfolioData;
+---
+
+<footer class="footer">
+  <div class="container">
+    <div class="fade-in">{contact.footer}</div>
   </div>
 </footer>
+
+<style>
+  .footer {
+    padding: 4rem 0;
+    border-top: 1px solid #f0f0f0;
+    text-align: center;
+    color: #999;
+    font-size: 0.8em;
+  }
+</style>

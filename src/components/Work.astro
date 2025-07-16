@@ -1,133 +1,99 @@
-<section id="work" class="py-32 px-8 bg-gray-50">
-  <div class="max-w-5xl mx-auto">
-    <div class="grid md:grid-cols-12 gap-20">
-      <div class="md:col-span-4">
-        <h2
-          class="text-xs tracking-[0.3em] uppercase text-gray-400 mb-8 sticky top-32">
-          Selected Work
-        </h2>
-      </div>
-      <div class="md:col-span-8">
-        <div class="space-y-20">
-          <a class="group" href="https://hearinit.com" target="_blank">
-            <div class="flex justify-between items-start mb-6">
-              <h3
-                class="text-2xl font-light group-hover:text-blue-600 transition-colors duration-500">
-                HearinIT Platform
-              </h3>
-              <div class="text-sm text-gray-400 font-mono">2025</div>
-            </div>
-            <p
-              class="text-gray-600 mb-6 leading-relaxed text-lg group-hover:text-gray-900 transition-colors duration-500">
-              Modern web platform connecting users with certified audiologists
-              and trusted hearing centers. Clean, accessible design prioritizing
-              user guidance and support throughout the hearing aid selection
-              process, with features like immediate personalized advice,
-              professional network access, and ongoing customer care.
-            </p>
-            <div class="text-sm text-gray-400 tracking-wide">
-              Astro, TailwindCSS, SanityCMS Integration
-            </div>
-            <div
-              class="w-full h-px bg-gray-200 mt-8 group-hover:bg-blue-600 transition-colors duration-500">
-            </div>
-          </a>
-          <br />
-          <a
-            class="group"
-            href="https://generators.azaldev.com/"
-            target="_blank">
-            <div class="flex justify-between items-start mb-6">
-              <h3
-                class="text-2xl font-light group-hover:text-blue-600 transition-colors duration-500">
-                Generators Hub
-              </h3>
-              <div class="text-sm text-gray-400 font-mono">2025</div>
-            </div>
-            <p
-              class="text-gray-600 mb-6 leading-relaxed text-lg group-hover:text-gray-900 transition-colors duration-500">
-              A collection of generators with a Discord-inspired interface that
-              includes a README generator and color palettes, designed to
-              simplify developers' workflow.
-            </p>
-            <div class="text-sm text-gray-400 tracking-wide">
-              Next.js, TypeScript, Framer Motion
-            </div>
-            <div
-              class="w-full h-px bg-gray-200 mt-8 group-hover:bg-blue-600 transition-colors duration-500">
-            </div>
-          </a>
-          <br />
-          <a class="group" href="https://devflow.azaldev.com" target="_blank">
-            <div class="flex justify-between items-start mb-6">
-              <h3
-                class="text-2xl font-light group-hover:text-blue-600 transition-colors duration-500">
-                Devflow
-              </h3>
-              <div class="text-sm text-gray-400 font-mono">2025</div>
-            </div>
-            <p
-              class="text-gray-600 mb-6 leading-relaxed text-lg group-hover:text-gray-900 transition-colors duration-500">
-              My blog is a space dedicated to web development, freelancing,
-              technology, and personal projects, where articles, guides, and
-              insights on programming and digital entrepreneurship are shared.
-            </p>
-            <div class="text-sm text-gray-400 tracking-wide">
-              Astro, TailwindCSS, Markdown
-            </div>
-            <div
-              class="w-full h-px bg-gray-200 mt-8 group-hover:bg-blue-600 transition-colors duration-500">
-            </div>
-          </a>
-          <br />
-          <a
-            class="group"
-            href="https://bite-and-smash.tunuevaweb.es/"
-            target="_blank">
-            <div class="flex justify-between items-start mb-6">
-              <h3
-                class="text-2xl font-light group-hover:text-blue-600 transition-colors duration-500">
-                Bite & Smash
-              </h3>
-              <div class="text-sm text-gray-400 font-mono">2025</div>
-            </div>
-            <p
-              class="text-gray-600 mb-6 leading-relaxed text-lg group-hover:text-gray-900 transition-colors duration-500">
-              I designed and developed the website for Bite & Smash, a burger
-              restaurant, with the goal of showcasing their menu and
-              highlighting their unique culinary concept.
-            </p>
-            <div class="text-sm text-gray-400 tracking-wide">
-              Astro, TailwindCSS, UI/UX
-            </div>
-            <div
-              class="w-full h-px bg-gray-200 mt-8 group-hover:bg-blue-600 transition-colors duration-500">
-            </div>
-          </a>
-          <br />
-          <a class="group" href="https://tunuevaweb.es/" target="_blank">
-            <div class="flex justify-between items-start mb-6">
-              <h3
-                class="text-2xl font-light group-hover:text-blue-600 transition-colors duration-500">
-                Tu Nueva Web
-              </h3>
-              <div class="text-sm text-gray-400 font-mono">2024</div>
-            </div>
-            <p
-              class="text-gray-600 mb-6 leading-relaxed text-lg group-hover:text-gray-900 transition-colors duration-500">
-              "Tu Nueva Web" specializes in creating modern, accessible, and
-              optimized web solutions, enabling anyone or any business to
-              establish their online presence quickly and effectively.
-            </p>
-            <div class="text-sm text-gray-400 tracking-wide">
-              Astro, TailwindCSS, SEO
-            </div>
-            <div
-              class="w-full h-px bg-gray-200 mt-8 group-hover:bg-blue-600 transition-colors duration-500">
-            </div>
-          </a>
-        </div>
+---
+import portfolioData from '../data/portfolio.json';
+const { work } = portfolioData;
+
+const createSlug = (title) => {
+  return title
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+};
+---
+
+<section id="work" class="section bg-alt">
+  <div class="container">
+    <div class="section-grid">
+      <h2 class="section-title">{work.title}</h2>
+      <div class="section-content">
+        {
+          work.projects.map((project) => (
+            <a
+              href={`/work/${createSlug(project.title)}`}
+              class="project fade-in">
+              <div class="project-header">
+                <h3 class="project-title">{project.title}</h3>
+                <span class="project-year">{project.year}</span>
+              </div>
+              <p class="project-description">{project.description}</p>
+              <div class="project-tech">{project.technologies}</div>
+            </a>
+          ))
+        }
       </div>
     </div>
   </div>
 </section>
+
+<style>
+  .project {
+    display: block;
+    margin-bottom: 4rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #f0f0f0;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease;
+    padding: 1rem 0.5rem;
+  }
+
+  .project:last-child {
+    border-bottom: none;
+  }
+
+  .project:hover {
+    background-color: #f5f5f5;
+  }
+
+  .project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 1rem;
+  }
+
+  .project-title {
+    font-size: 1.1em;
+    color: #000;
+    transition: color 0.3s ease;
+  }
+
+  .project:hover .project-title {
+    color: #333;
+  }
+
+  .project-year {
+    color: #999;
+    font-size: 0.8em;
+  }
+
+  .project-description {
+    color: #333;
+    margin-bottom: 1rem;
+  }
+
+  .project-tech {
+    color: #666;
+    font-size: 0.8em;
+  }
+
+  @media (max-width: 768px) {
+    .project-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+  }
+</style>

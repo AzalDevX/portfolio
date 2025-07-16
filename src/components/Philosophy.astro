@@ -1,49 +1,54 @@
-<section class="py-32 px-8 bg-gray-50">
-  <div class="max-w-5xl mx-auto">
-    <div class="grid md:grid-cols-12 gap-20">
-      <div class="md:col-span-4">
-        <h2
-          class="text-xs tracking-[0.3em] uppercase text-gray-400 mb-8 sticky top-32">
-          Philosophy
-        </h2>
-      </div>
-      <div class="md:col-span-8">
-        <div class="space-y-16">
-          <div class="group">
-            <h3
-              class="text-2xl font-light mb-6 group-hover:text-blue-600 transition-colors duration-500">
-              Clarity
-            </h3>
-            <p
-              class="text-gray-600 leading-relaxed text-lg group-hover:text-gray-900 transition-colors duration-500">
-              Clean, documented code and transparent communication throughout
-              every project phase.
-            </p>
-          </div>
-          <div class="group">
-            <h3
-              class="text-2xl font-light mb-6 group-hover:text-blue-600 transition-colors duration-500">
-              Efficiency
-            </h3>
-            <p
-              class="text-gray-600 leading-relaxed text-lg group-hover:text-gray-900 transition-colors duration-500">
-              Optimized solutions that prioritize performance, scalability, and
-              maintainability.
-            </p>
-          </div>
-          <div class="group">
-            <h3
-              class="text-2xl font-light mb-6 group-hover:text-blue-600 transition-colors duration-500">
-              Purposeful Design
-            </h3>
-            <p
-              class="text-gray-600 leading-relaxed text-lg group-hover:text-gray-900 transition-colors duration-500">
-              Every element serves a function. Aesthetics that enhance usability
-              and user experience.
-            </p>
-          </div>
+---
+import portfolioData from '../data/portfolio.json';
+const { philosophy } = portfolioData;
+---
+
+<section class="section bg-alt">
+    <div class="container">
+        <div class="section-grid">
+            <h2 class="section-title">{philosophy.title}</h2>
+            <div class="section-content">
+                {philosophy.values.map(value => (
+                    <div class="value fade-in">
+                        <h3 class="value-title">{value.title}</h3>
+                        <p class="value-tagline">{value.tagline}</p>
+                        <p class="value-description">{value.description}</p>
+                    </div>
+                ))}
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </section>
+
+<style>
+    .value {
+        margin-bottom: 4rem; 
+        padding-top: 2rem; 
+        border-top: 1px solid #e0e0e0; 
+    }
+    
+    .value:first-child {
+        border-top: none; 
+        padding-top: 0; 
+    }
+
+    .value-title {
+        color: #000;
+        font-size: 1.2em; 
+        font-weight: 500; 
+        margin-bottom: 0.8rem;
+    }
+
+    .value-tagline {
+        color: #666;
+        font-size: 0.95em; 
+        margin-bottom: 1.5rem; 
+        font-weight: 400;
+    }
+    
+    .value-description {
+        color: #333;
+        font-size: 0.9em; 
+        line-height: 1.6em; 
+    }
+</style>

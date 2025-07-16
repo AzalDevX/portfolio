@@ -1,4 +1,36 @@
-<div
-  id="cursor-follower"
-  class="fixed pointer-events-none z-0 opacity-30 transition-opacity duration-1000 w-[200px] h-[200px] rounded-full">
-</div>
+<div id="cursor-follower"></div>
+
+<style>
+  #cursor-follower {
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.3;
+    transition: opacity 1s ease;
+    background: radial-gradient(
+      200px circle at center,
+      rgba(55, 58, 63, 0.1) 0%,
+      rgba(81, 83, 88, 0.05) 50%,
+      transparent 100%
+    );
+  }
+</style>
+
+<script>
+  let mousePosition = { x: 0, y: 0 };
+  const cursorFollower = document.getElementById('cursor-follower');
+
+  function handleMouseMove(e) {
+    mousePosition = { x: e.clientX, y: e.clientY };
+
+    if (cursorFollower) {
+      cursorFollower.style.left = `${mousePosition.x - 100}px`;
+      cursorFollower.style.top = `${mousePosition.y - 100}px`;
+    }
+  }
+
+  document.addEventListener('mousemove', handleMouseMove);
+</script>

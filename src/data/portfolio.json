@@ -1,0 +1,153 @@
+{
+  "personal": {
+    "name": "Gonzalo",
+    "title": "Web Developer & Designer",
+    "location": "Spain",
+    "tagline": "Developing modern web experiences with Astro, Vue and minimalist design",
+    "email": "me@azaldev.com",
+    "social": {
+      "linkedin": "https://lalo.lol/in",
+      "github": "https://lalo.lol/gh",
+      "malt": "https://lalo.lol/malt"
+    }
+  },
+  "navigation": [
+    { "label": "About", "target": "about" },
+    { "label": "Work", "target": "work" },
+    { "label": "Experience", "target": "experience" },
+    { "label": "Contact", "target": "contact" }
+  ],
+  "about": {
+    "title": "About",
+    "paragraphs": [
+      "I'm a frontend developer based in Spain, specializing in creating modern, efficient web experiences. With a background in Web and Multiplatform Development, I combine solid technical knowledge with a minimalist aesthetic approach.",
+      "My passion for automation and clean code allows me to deliver solutions that not only look exceptional but perform flawlessly. I focus on creating digital experiences that are both beautiful and functional."
+    ],
+    "technologies": [
+      "Astro",
+      "Vue.js",
+      "TailwindCSS",
+      "React",
+      "JavaScript",
+      "GitHub"
+    ]
+  },
+  "work": {
+    "title": "Selected Work",
+    "projects": [
+      {
+        "title": "Hearinit Platform",
+        "year": "2025",
+        "description": "Modern platform connecting users with certified audiologists and trusted hearing centers. Accessible design focused on personalized advice, expert access, and continuous support.",
+        "technologies": "Astro, TailwindCSS, CMS Integration",
+        "longDescription": "A command-line tool designed to instantly scaffold modern frontend projects preconfigured with Vue + Tailwind or Astro + Tailwind. It allows developers to launch a new project in seconds with everything set up and ready to go. Upon execution, it generates a clean, organized project structure with essential files, preinstalled dependencies, recommended configurations, and global styling powered by TailwindCSS. Best practices are baked in by default, so you can start building immediately without worrying about setup. Additionally, it connects to your GitHub account, automatically creates a new repository, pushes the code to it, and sets up the remote—saving you even more time during the initial setup process.",
+        "features": [
+          "Responsive design for all devices",
+          "User-friendly navigation and clear information architecture",
+          "Interactive forms for user contact and appointment requests",
+          "Optimized performance for fast loading times",
+          "Integration with maps for locating partner centers",
+          "SEO optimization for higher search engine visibility",
+          "Professional, trustworthy visual branding"
+        ],
+        "liveUrl": "https://hearinit.com",
+        "githubUrl": ""
+      },
+      {
+        "title": "NPM Package",
+        "year": "2025",
+        "description": "CLI tool that instantly sets up modern frontend projects with Vue + Tailwind or Astro + Tailwind.",
+        "technologies": "Astro, TailwindCSS, Node",
+        "longDescription": "Designed and developed an interactive analytics dashboard to visualize key business metrics. The frontend was built with Astro for optimal performance and SEO, while data processing and automated reporting were handled by Python scripts. Utilized Chart.js for dynamic and customizable data visualizations, providing actionable insights to stakeholders. The dashboard is designed for easy integration with various data sources.",
+        "features": [
+          "Project scaffolding with Astro and Tailwind CSS integration",
+          "Responsive design structure out of the box",
+          "Opinionated, minimalist file structure",
+          "Easy start with 'npx create-azaldev-template' command",
+          "Ready-to-use development and build scripts",
+          "Seamless integration with GitHub for version control",
+          "Modern, accessible templates",
+          "Developer-friendly documentation included"
+        ],
+        "liveUrl": "https://docs-azaldev-template.azaldev.com/",
+        "githubUrl": "https://www.npmjs.com/package/create-azaldev-template"
+      },
+      {
+        "title": "Bite & Smash",
+        "year": "2025",
+        "description": "Designed and developed Bite & Smash's website to showcase their menu and highlight their unique burger concept.",
+        "technologies": "Astro, TailwindCSS, UI/UX",
+        "longDescription": "I designed and developed the website for Bite & Smash, a modern burger restaurant, with a strong focus on showcasing their menu and emphasizing their unique culinary identity. The site was crafted to reflect the brand's bold personality, using vibrant visuals and a clean layout to highlight signature dishes, ingredients, and the restaurant's smash-style cooking concept. The result is an engaging digital presence that elevates their brand and enhances the customer experience online.",
+        "features": [
+          "Smooth, performant animations (GSAP)",
+          "Optimized image loading and asset delivery",
+          "Fully responsive and accessible design",
+          "Integrated contact form",
+          "Blog section for studio updates"
+        ],
+        "liveUrl": "https://bite-and-smash.tunuevaweb.es/",
+        "githubUrl": "https://github.com/tunuevaweb/bite-and-smash"
+      },
+      {
+        "title": "Tu Nueva Web",
+        "year": "2024",
+        "description": "'Tu Nueva Web' creates modern, accessible, and optimized websites to help individuals and businesses quickly build a strong online presence.",
+        "technologies": "Astro, TailwindCSS, SEO",
+        "longDescription": "Tu Nueva Web specializes in crafting modern, accessible, and performance-optimized web solutions tailored to the needs of individuals and businesses alike. With a strong focus on usability and design, we help clients establish a professional and effective online presence—quickly and without unnecessary complexity. Whether it's a personal brand or a growing company, our websites are built to be fast, responsive, and easy to manage from day one.",
+        "features": [
+          "Automated data entry and processing",
+          "Customizable task scheduling",
+          "Web-based interface for easy interaction",
+          "Error logging and reporting",
+          "Integration with third-party APIs"
+        ],
+        "liveUrl": "https://tunuevaweb.es",
+        "githubUrl": ""
+      }
+    ]
+  },
+  "experience": {
+    "title": "Experience",
+    "positions": [
+      {
+        "title": "Freelance",
+        "company": "Independent",
+        "period": "2024 - Present",
+        "description": "Development of websites and applications for diverse clients. Specialization in modern frameworks and minimalist design with focus on performance and user experience.",
+        "technologies": "Vue.js, Astro, TailwindCSS, Jamstack"
+      },
+      {
+        "title": "System Developer",
+        "company": "Accenture",
+        "period": "2023 - 2024",
+        "description": "Development of improvements and automation in internal applications using Python and VB.NET. Process optimization and implementation of efficient solutions.",
+        "technologies": "Python, VB.NET, Process Automation"
+      }
+    ]
+  },
+  "philosophy": {
+    "title": "My Philosophy",
+    "values": [
+      {
+        "title": "Clarity",
+        "tagline": "Transparent Code, Clear Communication.",
+        "description": "I believe in building solutions with absolute clarity, from the first line of code to the final deployment. This means writing clean, well-documented code that is easy to understand and maintain. Equally important is transparent and consistent communication with clients, ensuring everyone is aligned and informed throughout every stage of the project."
+      },
+      {
+        "title": "Efficiency",
+        "tagline": "Optimized Solutions, Maximum Impact.",
+        "description": "Efficiency is at the core of my development process. I strive to deliver optimized solutions that not only perform flawlessly but are also scalable and maintainable in the long run. This involves choosing the right tools, streamlining workflows, and automating repetitive tasks to ensure maximum impact with minimal overhead."
+      },
+      {
+        "title": "Purposeful Design",
+        "tagline": "Aesthetics with a Mission.",
+        "description": "Design is not just about how something looks, but how it works. My approach to design is purposeful, ensuring that every visual element and interaction serves a clear function. I craft aesthetics that enhance usability and elevate the user experience, creating digital products that are both beautiful and intuitively functional."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "message": "Available for new freelance projects. Let's discuss how we can bring your ideas to life.",
+    "footer": "Between lines of code, humanity remains."
+  }
+}
