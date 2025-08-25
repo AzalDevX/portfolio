@@ -40,7 +40,7 @@
         "year": "2025",
         "description": "Modern platform connecting users with certified audiologists and trusted hearing centers. Accessible design focused on personalized advice, expert access, and continuous support.",
         "technologies": "Astro, TailwindCSS, CMS Integration",
-        "longDescription": "A command-line tool designed to instantly scaffold modern frontend projects preconfigured with Vue + Tailwind or Astro + Tailwind. It allows developers to launch a new project in seconds with everything set up and ready to go. Upon execution, it generates a clean, organized project structure with essential files, preinstalled dependencies, recommended configurations, and global styling powered by TailwindCSS. Best practices are baked in by default, so you can start building immediately without worrying about setup. Additionally, it connects to your GitHub account, automatically creates a new repository, pushes the code to it, and sets up the remote—saving you even more time during the initial setup process.",
+        "longDescription": "Hearinit is a modern platform designed to seamlessly connect individuals with certified audiologists and trusted hearing centers. Its core mission is to provide an accessible and intuitive experience, ensuring every user receives personalized guidance for their hearing health. The platform emphasizes universal accessibility, allowing anyone to navigate effortlessly while accessing tailored recommendations.",
         "features": [
           "Responsive design for all devices",
           "User-friendly navigation and clear information architecture",
