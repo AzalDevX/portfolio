@@ -12,6 +12,12 @@ const { contact, personal } = portfolioData;
         <a href={`mailto:${personal.email}`} class="contact-email fade-in"
           >{personal.email}</a
         >
+
+        <!-- Contenedor para el botón de Google Calendar -->
+        <div class="google-calendar-container fade-in">
+          <div id="google-calendar-button"></div>
+        </div>
+
         <div class="contact-social fade-in">
           <a href={personal.social.linkedin} target="_blank" class="social-link"
             >LinkedIn</a
@@ -39,13 +45,19 @@ const { contact, personal } = portfolioData;
     font-size: 1.2em;
     color: #000;
     text-decoration: none;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     display: inline-block;
     transition: color 0.3s ease;
   }
 
   .contact-email:hover {
     color: #666;
+  }
+
+  .google-calendar-container {
+    margin-bottom: 4rem;
+    display: flex;
+    justify-content: flex-start;
   }
 
   .contact-social {
@@ -65,9 +77,90 @@ const { contact, personal } = portfolioData;
   }
 
   @media (max-width: 768px) {
+    .google-calendar-container {
+      justify-content: center;
+      margin-bottom: 3rem;
+    }
+
     .contact-social {
       flex-direction: column;
       gap: 1rem;
     }
   }
 </style>
+
+<!-- Google Calendar Appointment Scheduling begin -->
+<link
+  href="https://calendar.google.com/calendar/scheduling-button-script.css"
+  rel="stylesheet"
+/>
+<script
+  src="https://calendar.google.com/calendar/scheduling-button-script.js"
+  async></script>
+<script>
+  (function () {
+    window.addEventListener('load', function () {
+      calendar.schedulingButton.load({
+        url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1QF1BIcez4Jt9OWjC8hrZd7a34UfemQncXGpb1P-g7RRPvegXfnJFlihzR-x_ujcx68apg_LlY?gv=true',
+        color: '#333333',
+        label: 'Reservar una cita',
+        target: document.getElementById('google-calendar-button'),
+      });
+
+      // Aplicamos estilos personalizados después de que el botón se genere
+      setTimeout(() => {
+        const container = document.getElementById('google-calendar-button');
+        if (container && container.nextElementSibling) {
+          const button = container.nextElementSibling;
+
+          // Estilos base aplicados directamente en línea
+          button.style.backgroundColor = 'transparent';
+          button.style.color = '#333';
+          button.style.border = '1px solid #e0e0e0';
+          button.style.padding = '16px 32px';
+          button.style.fontSize = '0.95em';
+          button.style.textDecoration = 'none';
+          button.style.display = 'inline-block';
+          button.style.transition = 'all 0.3s ease';
+          button.style.borderRadius = '0';
+          button.style.cursor = 'pointer';
+          button.style.fontFamily = 'inherit';
+          button.style.fontWeight = '400';
+          button.style.letterSpacing = '0.5px';
+          button.style.minWidth = '180px';
+          button.style.textAlign = 'center';
+
+          // Eventos para hover effect (ya que CSS no funciona)
+          button.addEventListener('mouseenter', () => {
+            button.style.backgroundColor = '#f8f8f8';
+            button.style.borderColor = '#333';
+            button.style.color = '#000';
+            button.style.transform = 'translateY(-2px)';
+            button.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.1)';
+          });
+
+          button.addEventListener('mouseleave', () => {
+            button.style.backgroundColor = 'transparent';
+            button.style.borderColor = '#e0e0e0';
+            button.style.color = '#333';
+            button.style.transform = 'none';
+            button.style.boxShadow = 'none';
+          });
+
+          button.addEventListener('mousedown', () => {
+            button.style.transform = 'translateY(0)';
+            button.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.1)';
+          });
+
+          button.addEventListener('mouseup', () => {
+            if (button.matches(':hover')) {
+              button.style.transform = 'translateY(-2px)';
+              button.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.1)';
+            }
+          });
+        }
+      }, 300); // Esperamos 300ms para que el botón se genere
+    });
+  })();
+</script>
+<!-- end Google Calendar Appointment Scheduling -->

@@ -1,9 +1,9 @@
 {
   "personal": {
     "name": "Gonzalo",
-    "title": "Web Developer & Designer",
-    "location": "Spain",
-    "tagline": "Developing modern web experiences with Astro, Vue and minimalist design",
+    "title": "Desarrollador y Diseñador Web",
+    "location": "España",
+    "tagline": "Creando experiencias web modernas con Astro, Vue y un diseño minimalista",
     "email": "me@azaldev.com",
     "social": {
       "linkedin": "https://lalo.lol/in",
@@ -12,16 +12,16 @@
     }
   },
   "navigation": [
-    { "label": "About", "target": "about" },
-    { "label": "Work", "target": "work" },
-    { "label": "Experience", "target": "experience" },
-    { "label": "Contact", "target": "contact" }
+    { "label": "Sobre mí", "target": "about" },
+    { "label": "Trabajos", "target": "work" },
+    { "label": "Experiencia", "target": "experience" },
+    { "label": "Contacto", "target": "contact" }
   ],
   "about": {
-    "title": "About",
+    "title": "Sobre mí",
     "paragraphs": [
-      "I'm a frontend developer based in Spain, specializing in creating modern, efficient web experiences. With a background in Web and Multiplatform Development, I combine solid technical knowledge with a minimalist aesthetic approach.",
-      "My passion for automation and clean code allows me to deliver solutions that not only look exceptional but perform flawlessly. I focus on creating digital experiences that are both beautiful and functional."
+      "Soy un desarrollador frontend de España, especializado en crear experiencias web modernas y eficientes. Con mi experiencia en Desarrollo de Aplicaciones Web y Multiplataforma, combino un conocimiento técnico muy sólido con un enfoque estético minimalista.",
+      "Mi pasión por la automatización y el código limpio me permite entregar soluciones que no solo se ven increíbles, sino que funcionan a la perfección. Me centro en crear experiencias digitales que sean, a la vez, bonitas y funcionales."
     ],
     "technologies": [
       "Astro",
@@ -33,41 +33,41 @@
     ]
   },
   "work": {
-    "title": "Selected Work",
+    "title": "Trabajos destacados",
     "projects": [
       {
-        "title": "Hearinit Platform",
+        "title": "Plataforma Hearinit",
         "year": "2025",
-        "description": "Modern platform connecting users with certified audiologists and trusted hearing centers. Accessible design focused on personalized advice, expert access, and continuous support.",
+        "description": "Una plataforma supermoderna que conecta a usuarios con audiólogos certificados y centros auditivos de confianza. Diseño accesible, centrado en ofrecer asesoramiento personalizado, acceso a expertos y soporte continuo.",
         "technologies": "Astro, TailwindCSS, CMS Integration",
-        "longDescription": "Hearinit is a modern platform designed to seamlessly connect individuals with certified audiologists and trusted hearing centers. Its core mission is to provide an accessible and intuitive experience, ensuring every user receives personalized guidance for their hearing health. The platform emphasizes universal accessibility, allowing anyone to navigate effortlessly while accessing tailored recommendations.",
+        "longDescription": "Hearinit es una plataforma moderna diseñada para conectar de manera fluida a las personas con audiólogos certificados y centros auditivos de confianza. Su misión principal es ofrecer una experiencia accesible e intuitiva, asegurando que cada usuario reciba una orientación personalizada para su salud auditiva. La plataforma destaca por su accesibilidad universal, permitiendo que cualquiera pueda navegar sin esfuerzo mientras accede a recomendaciones hechas a su medida.",
         "features": [
-          "Responsive design for all devices",
-          "User-friendly navigation and clear information architecture",
-          "Interactive forms for user contact and appointment requests",
-          "Optimized performance for fast loading times",
-          "Integration with maps for locating partner centers",
-          "SEO optimization for higher search engine visibility",
-          "Professional, trustworthy visual branding"
+          "Diseño responsivo para todo tipo de dispositivos",
+          "Navegación intuitiva y arquitectura de información clara",
+          "Formularios interactivos para contacto y solicitud de citas",
+          "Rendimiento optimizado para tiempos de carga rápidos",
+          "Integración de mapas para localizar centros asociados",
+          "Optimización SEO para mayor visibilidad en buscadores",
+          "Marca visual profesional y de confianza"
         ],
         "liveUrl": "https://hearinit.com",
         "githubUrl": ""
       },
       {
-        "title": "NPM Package",
+        "title": "Paquete NPM",
         "year": "2025",
-        "description": "CLI tool that instantly sets up modern frontend projects with Vue + Tailwind or Astro + Tailwind.",
+        "description": "Una herramienta CLI que configura proyectos frontend modernos con Vue + Tailwind o Astro + Tailwind en un abrir y cerrar de ojos.",
         "technologies": "Astro, TailwindCSS, Node",
-        "longDescription": "Designed and developed an interactive analytics dashboard to visualize key business metrics. The frontend was built with Astro for optimal performance and SEO, while data processing and automated reporting were handled by Python scripts. Utilized Chart.js for dynamic and customizable data visualizations, providing actionable insights to stakeholders. The dashboard is designed for easy integration with various data sources.",
+        "longDescription": "Diseñé y desarrollé un panel de control de analíticas interactivo para visualizar métricas de negocio clave. El frontend se construyó con Astro para un rendimiento óptimo y SEO, mientras que el procesamiento de datos y la automatización de informes se gestionaron con scripts de Python. Usé Chart.js para visualizaciones de datos dinámicas y personalizables, ofreciendo insights súper útiles para los directivos. El panel está diseñado para integrarse fácilmente con diversas fuentes de datos.",
         "features": [
-          "Project scaffolding with Astro and Tailwind CSS integration",
-          "Responsive design structure out of the box",
-          "Opinionated, minimalist file structure",
-          "Easy start with 'npx create-azaldev-template' command",
-          "Ready-to-use development and build scripts",
-          "Seamless integration with GitHub for version control",
-          "Modern, accessible templates",
-          "Developer-friendly documentation included"
+          "Creación de proyectos con integración de Astro y Tailwind CSS",
+          "Estructura con diseño responsivo de serie",
+          "Estructura de archivos minimalista y cuidada",
+          "Fácil de empezar con el comando 'npx create-azaldev-template'",
+          "Scripts de desarrollo y compilación listos para usar",
+          "Integración perfecta con GitHub para el control de versiones",
+          "Plantillas modernas y accesibles",
+          "Incluye documentación pensada para desarrolladores"
         ],
         "liveUrl": "https://docs-azaldev-template.azaldev.com/",
         "githubUrl": "https://www.npmjs.com/package/create-azaldev-template"
@@ -75,15 +75,15 @@
       {
         "title": "Bite & Smash",
         "year": "2025",
-        "description": "Designed and developed Bite & Smash's website to showcase their menu and highlight their unique burger concept.",
+        "description": "Diseñé y desarrollé la web de Bite & Smash para mostrar su carta y destacar su concepto único de hamburguesas.",
         "technologies": "Astro, TailwindCSS, UI/UX",
-        "longDescription": "I designed and developed the website for Bite & Smash, a modern burger restaurant, with a strong focus on showcasing their menu and emphasizing their unique culinary identity. The site was crafted to reflect the brand's bold personality, using vibrant visuals and a clean layout to highlight signature dishes, ingredients, and the restaurant's smash-style cooking concept. The result is an engaging digital presence that elevates their brand and enhances the customer experience online.",
+        "longDescription": "Diseñé y desarrollé la web para Bite & Smash, una hamburguesería moderna, poniendo un énfasis especial en destacar su menú y su identidad culinaria única. La web se creó para reflejar la personalidad atrevida de la marca, usando imágenes vibrantes y un diseño limpio para destacar los platos estrella, los ingredientes y el concepto de cocina 'smash'. El resultado es una presencia digital atractiva que eleva su marca y mejora la experiencia del cliente en la web.",
         "features": [
-          "Smooth, performant animations (GSAP)",
-          "Optimized image loading and asset delivery",
-          "Fully responsive and accessible design",
-          "Integrated contact form",
-          "Blog section for studio updates"
+          "Animaciones fluidas y de alto rendimiento (GSAP)",
+          "Carga de imágenes y recursos optimizada",
+          "Diseño totalmente responsivo y accesible",
+          "Formulario de contacto integrado",
+          "Sección de blog para novedades del estudio"
         ],
         "liveUrl": "https://bite-and-smash.tunuevaweb.es/",
         "githubUrl": "https://github.com/tunuevaweb/bite-and-smash"
@@ -91,15 +91,15 @@
       {
         "title": "Tu Nueva Web",
         "year": "2024",
-        "description": "'Tu Nueva Web' creates modern, accessible, and optimized websites to help individuals and businesses quickly build a strong online presence.",
+        "description": "'Tu Nueva Web' crea sitios web modernos, accesibles y optimizados para ayudar a personas y negocios a construir una presencia online fuerte y rápida.",
         "technologies": "Astro, TailwindCSS, SEO",
-        "longDescription": "Tu Nueva Web specializes in crafting modern, accessible, and performance-optimized web solutions tailored to the needs of individuals and businesses alike. With a strong focus on usability and design, we help clients establish a professional and effective online presence—quickly and without unnecessary complexity. Whether it's a personal brand or a growing company, our websites are built to be fast, responsive, and easy to manage from day one.",
+        "longDescription": "Tu Nueva Web se especializa en crear soluciones web modernas, accesibles y optimizadas para el rendimiento, pensadas para las necesidades de personas y empresas. Nos centramos en la usabilidad y el diseño para ayudar a los clientes a establecer una presencia online profesional y efectiva, de forma rápida y sin complicaciones innecesarias. Ya sea para una marca personal o una empresa en crecimiento, nuestras webs están diseñadas para ser rápidas, adaptables y fáciles de gestionar desde el primer día.",
         "features": [
-          "Automated data entry and processing",
-          "Customizable task scheduling",
-          "Web-based interface for easy interaction",
-          "Error logging and reporting",
-          "Integration with third-party APIs"
+          "Entrada y procesamiento de datos automatizados",
+          "Programación de tareas personalizable",
+          "Interfaz web para una interacción sencilla",
+          "Registro e informes de errores",
+          "Integración con APIs de terceros"
         ],
         "liveUrl": "https://tunuevaweb.es",
         "githubUrl": ""
@@ -107,47 +107,47 @@
     ]
   },
   "experience": {
-    "title": "Experience",
+    "title": "Experiencia",
     "positions": [
       {
-        "title": "Freelance",
-        "company": "Independent",
-        "period": "2024 - Present",
-        "description": "Development of websites and applications for diverse clients. Specialization in modern frameworks and minimalist design with focus on performance and user experience.",
+        "title": "Desarrollador Freelance",
+        "company": "Autónomo",
+        "period": "2024 - Hoy",
+        "description": "Desarrollo de sitios web y aplicaciones para clientes diversos. Especializado en frameworks modernos y diseño minimalista, con un gran foco en el rendimiento y la experiencia de usuario.",
         "technologies": "Vue.js, Astro, TailwindCSS, Jamstack"
       },
       {
-        "title": "System Developer",
+        "title": "Desarrollador de Sistemas",
         "company": "Accenture",
         "period": "2023 - 2024",
-        "description": "Development of improvements and automation in internal applications using Python and VB.NET. Process optimization and implementation of efficient solutions.",
-        "technologies": "Python, VB.NET, Process Automation"
+        "description": "Desarrollo de mejoras y automatizaciones en aplicaciones internas usando Python y VB.NET. Optimización de procesos e implementación de soluciones super eficientes.",
+        "technologies": "Python, VB.NET, Automatización de procesos"
       }
     ]
   },
   "philosophy": {
-    "title": "My Philosophy",
+    "title": "Mi Filosofía",
     "values": [
       {
-        "title": "Clarity",
-        "tagline": "Transparent Code, Clear Communication.",
-        "description": "I believe in building solutions with absolute clarity, from the first line of code to the final deployment. This means writing clean, well-documented code that is easy to understand and maintain. Equally important is transparent and consistent communication with clients, ensuring everyone is aligned and informed throughout every stage of the project."
+        "title": "Claridad",
+        "tagline": "Código transparente, comunicación directa.",
+        "description": "Creo firmemente en construir soluciones con total claridad, desde la primera línea de código hasta el despliegue final. Esto significa escribir código limpio y bien documentado que sea fácil de entender y mantener. Igual de importante es la comunicación transparente y constante con los clientes, asegurándome de que todos estemos en sintonía e informados en cada etapa del proyecto."
       },
       {
-        "title": "Efficiency",
-        "tagline": "Optimized Solutions, Maximum Impact.",
-        "description": "Efficiency is at the core of my development process. I strive to deliver optimized solutions that not only perform flawlessly but are also scalable and maintainable in the long run. This involves choosing the right tools, streamlining workflows, and automating repetitive tasks to ensure maximum impact with minimal overhead."
+        "title": "Eficiencia",
+        "tagline": "Soluciones optimizadas, máximo impacto.",
+        "description": "La eficiencia es el corazón de mi proceso de desarrollo. Me esfuerzo por ofrecer soluciones optimizadas que no solo funcionen de forma impecable, sino que también sean escalables y fáciles de mantener a largo plazo. Esto implica elegir las herramientas adecuadas, agilizar los flujos de trabajo y automatizar tareas repetitivas para conseguir el máximo impacto con el mínimo esfuerzo."
       },
       {
-        "title": "Purposeful Design",
-        "tagline": "Aesthetics with a Mission.",
-        "description": "Design is not just about how something looks, but how it works. My approach to design is purposeful, ensuring that every visual element and interaction serves a clear function. I craft aesthetics that enhance usability and elevate the user experience, creating digital products that are both beautiful and intuitively functional."
+        "title": "Diseño con propósito",
+        "tagline": "Estética con una misión.",
+        "description": "El diseño no es solo cómo se ve algo, sino cómo funciona. Mi enfoque de diseño es intencional, asegurándome de que cada elemento visual e interacción tenga una función clara. Creo una estética que mejora la usabilidad y eleva la experiencia de usuario, creando productos digitales que son a la vez bonitos y funcionales de forma intuitiva."
       }
     ]
   },
   "contact": {
-    "title": "Contact",
-    "message": "Available for new freelance projects. Let's discuss how we can bring your ideas to life.",
-    "footer": "Between lines of code, humanity remains."
+    "title": "Contacto",
+    "message": "Estoy disponible para nuevos proyectos freelance. Hablemos de cómo podemos hacer realidad tus ideas.",
+    "footer": "Entre líneas de código, la humanidad permanece."
   }
 }
