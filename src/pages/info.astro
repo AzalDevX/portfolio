@@ -2,7 +2,7 @@
 import MainLayout from '../layouts/Layout.astro';
 
 const socialLinks = [
-  { name: 'Portfolio', url: 'https://lalo.lol/me' },
+  { name: 'Portafolio', url: 'https://lalo.lol/me' },
   { name: 'GitHub', url: 'https://lalo.lol/gh' },
   { name: 'LinkedIn', url: 'https://lalo.lol/in' },
   { name: 'Twitter', url: 'https://lalo.lol/x' },
@@ -10,16 +10,19 @@ const socialLinks = [
 
 const services = [
   {
-    title: 'Web Design',
-    description: 'Custom solutions ideal for restaurants, yoga studios, fashion stores, and more.',
+    title: 'Diseño Web',
+    description:
+      'Soluciones a medida, ideales para restaurantes, estudios de yoga, tiendas de moda y más.',
   },
   {
-    title: 'SEO & Speed Optimization',
-    description: 'All sites are optimized for search engines and fast performance.',
+    title: 'SEO y Optimización de Velocidad',
+    description:
+      'Todos los sitios están optimizados para motores de búsqueda y un rendimiento ultrarrápido.',
   },
   {
-    title: 'Support & Updates',
-    description: 'I provide ongoing support to keep your site secure and up-to-date.',
+    title: 'Soporte y Actualizaciones',
+    description:
+      'Ofrezco soporte continuo para mantener tu sitio seguro y siempre actualizado.',
   },
 ];
 
@@ -39,167 +42,159 @@ const examples = [
 <MainLayout title="Info - Gonzalo Azaldegi">
   <div class="min-h-screen bg-white text-gray-900 font-light">
     <div class="max-w-4xl mx-auto px-8 pb-16 pt-32">
-      
-      <!-- Header -->
       <header class="text-center mb-20 fade-in">
         <h1 class="text-6xl md:text-7xl font-extralight mb-4 tracking-tighter">
           Gonzalo Azaldegi
         </h1>
         <p class="text-lg text-gray-600 mb-4 tracking-wide">
-          Web Developer | Astro Specialist & UI/UX Designer
+          Desarrollador Web | Especialista en Astro & Diseñador UI/UX
         </p>
         <p class="text-gray-500 max-w-2xl mx-auto leading-relaxed">
-          I'm Gonzalo Azaldegi, a web developer specialized in modern frameworks like Astro and Vue. 
-          I'm passionate about minimalist design and creating attractive, functional web experiences.
+          Soy Gonzalo Azaldegi, un desarrollador web especializado en frameworks
+          modernos como Astro y Vue. Me apasiona el diseño minimalista y crear
+          experiencias web atractivas y funcionales.
         </p>
       </header>
 
-      <!-- Social Links -->
-      <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-20">
-        {socialLinks.map((link, index) => (
-          <a 
-            href={link.url} 
-            target="_blank" 
-            rel="noopener noreferrer"
-            class="group flex items-center justify-between p-4 border border-gray-200 hover:border-gray-400 transition-colors duration-300 fade-in"
-            style={`animation-delay: ${index * 100}ms`}
-          >
-            <span class="text-sm tracking-wide">{link.name}</span>
-            <span class="text-gray-400 group-hover:text-gray-600 transition-colors duration-300">→</span>
-          </a>
-        ))}
+      <section
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-20">
+        {
+          socialLinks.map((link, index) => (
+            <a
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group flex items-center justify-between p-4 border border-gray-200 hover:border-gray-400 transition-colors duration-300 fade-in"
+              style={`animation-delay: ${index * 100}ms`}>
+              <span class="text-sm tracking-wide">{link.name}</span>
+              <span class="text-gray-400 group-hover:text-gray-600 transition-colors duration-300">
+                →
+              </span>
+            </a>
+          ))
+        }
       </section>
 
-      <!-- TuNuevaWeb Section -->
       <section class="mb-20 fade-in">
         <div class="border-t border-gray-200 pt-16">
           <h2 class="text-3xl font-light mb-8 tracking-tight">
-            TuNuevaWeb - Professional Services
+            TuNuevaWeb - Servicios Profesionales
           </h2>
           <p class="text-gray-600 mb-12 leading-relaxed text-lg">
-            At TuNuevaWeb, I offer modern and functional websites for businesses of all sizes, 
-            starting from very low cost. My sites will help you stand out in the digital space.
+            En TuNuevaWeb, ofrezco sitios web modernos y funcionales para
+            negocios de todos los tamaños, empezando desde un coste muy bajo.
+            Mis sitios te ayudarán a destacar en el mundo digital.
           </p>
-          
-          <!-- Services -->
+
           <div class="space-y-8 mb-12">
-            {services.map((service, index) => (
-              <div 
-                class="group border-b border-gray-100 pb-6 fade-in"
-                style={`animation-delay: ${index * 150}ms`}
-              >
-                <h3 class="text-lg font-medium mb-2 group-hover:text-gray-600 transition-colors duration-300">
-                  {service.title}
-                </h3>
-                <p class="text-gray-500 text-sm leading-relaxed">
-                  {service.description}
-                </p>
-              </div>
-            ))}
+            {
+              services.map((service, index) => (
+                <div
+                  class="group border-b border-gray-100 pb-6 fade-in"
+                  style={`animation-delay: ${index * 150}ms`}>
+                  <h3 class="text-lg font-medium mb-2 group-hover:text-gray-600 transition-colors duration-300">
+                    {service.title}
+                  </h3>
+                  <p class="text-gray-500 text-sm leading-relaxed">
+                    {service.description}
+                  </p>
+                </div>
+              ))
+            }
           </div>
 
-          <!-- Contact Info -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {contactInfo.map((item, index) => (
-              <a 
-                href={item.href}
-                class="text-sm text-gray-500 hover:text-gray-900 transition-colors duration-300 fade-in"
-                style={`animation-delay: ${index * 100 + 300}ms`}
-              >
-                {item.text}
-              </a>
-            ))}
+            {
+              contactInfo.map((item, index) => (
+                <a
+                  href={item.href}
+                  class="text-sm text-gray-500 hover:text-gray-900 transition-colors duration-300 fade-in"
+                  style={`animation-delay: ${index * 100 + 300}ms`}>
+                  {item.text}
+                </a>
+              ))
+            }
           </div>
         </div>
       </section>
 
-      <!-- Examples Section -->
       <section class="mb-20 fade-in">
         <div class="border-t border-gray-200 pt-16">
           <p class="text-center text-gray-600 mb-8">
-            You can see two examples of websites at
+            Puedes ver dos ejemplos de sitios web en
           </p>
           <div class="flex justify-center gap-8 flex-wrap">
-            {examples.map((example, index) => (
-              <a 
-                href={example.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="group text-sm tracking-wide border-b border-gray-300 pb-1 hover:border-gray-900 transition-colors duration-300 fade-in"
-                style={`animation-delay: ${index * 100}ms`}
-              >
-                <span class="group-hover:text-gray-600 transition-colors duration-300">
-                  {example.name}
-                </span>
-              </a>
-            ))}
+            {
+              examples.map((example, index) => (
+                <a
+                  href={example.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="group text-sm tracking-wide border-b border-gray-300 pb-1 hover:border-gray-900 transition-colors duration-300 fade-in"
+                  style={`animation-delay: ${index * 100}ms`}>
+                  <span class="group-hover:text-gray-600 transition-colors duration-300">
+                    {example.name}
+                  </span>
+                </a>
+              ))
+            }
           </div>
         </div>
       </section>
 
-      <!-- Templates Section -->
       <section class="space-y-16 mb-20">
-        <!-- Astro Template -->
         <div class="border-t border-gray-200 pt-16 fade-in">
           <h2 class="text-2xl font-light mb-6 tracking-tight">
-            Astro Template
+            Plantilla Astro
           </h2>
           <p class="text-gray-600 mb-8 leading-relaxed">
-            Minimalist and modern template in Astro + TailwindCSS, ideal for quick and stylish projects. 
-            Download and customize it.
+            Plantilla minimalista y moderna en Astro + TailwindCSS, ideal para
+            proyectos rápidos y con estilo. Descárgala y personalízala.
           </p>
-          <a 
+          <a
             href="https://github.com/AzalDevX/astro-template"
             target="_blank"
             rel="noopener noreferrer"
-            class="inline-block text-sm tracking-wide border-b border-gray-900 pb-1 hover:text-gray-600 transition-colors duration-300"
-          >
-            Download Template
+            class="inline-block text-sm tracking-wide border-b border-gray-900 pb-1 hover:text-gray-600 transition-colors duration-300">
+            Descargar Plantilla
           </a>
         </div>
 
-        <!-- Vue Template -->
         <div class="border-t border-gray-200 pt-16 fade-in">
-          <h2 class="text-2xl font-light mb-6 tracking-tight">
-            Vue Template
-          </h2>
+          <h2 class="text-2xl font-light mb-6 tracking-tight">Plantilla Vue</h2>
           <p class="text-gray-600 mb-8 leading-relaxed">
-            Minimalist and modern template for Vue 3 + Vite + TailwindCSS, designed for single-page applications (SPA). 
-            Includes optimized initial configuration and support for complete customization.
+            Plantilla minimalista y moderna para Vue 3 + Vite + TailwindCSS,
+            diseñada para aplicaciones de una sola página (SPA). Incluye una
+            configuración inicial optimizada y soporte para personalización
+            completa.
           </p>
-          <a 
+          <a
             href="https://github.com/AzalDevX/vue-template"
             target="_blank"
             rel="noopener noreferrer"
-            class="inline-block text-sm tracking-wide border-b border-gray-900 pb-1 hover:text-gray-600 transition-colors duration-300"
-          >
-            Download Template
+            class="inline-block text-sm tracking-wide border-b border-gray-900 pb-1 hover:text-gray-600 transition-colors duration-300">
+            Descargar Plantilla
           </a>
         </div>
       </section>
 
-      <!-- Contact Button -->
       <div class="text-center mb-16 fade-in">
-        <a 
-          href="mailto:me@azaldev.com"
-          class="inline-block text-lg tracking-wide border-b-2 border-gray-900 pb-2 hover:text-gray-600 hover:border-gray-600 transition-all duration-300"
-        >
-          Contact Me
+        <a
+          href="/#contact"
+          class="inline-block text-lg tracking-wide border-b-2 border-gray-900 pb-2 hover:text-gray-600 hover:border-gray-600 transition-all duration-300">
+          Contactar
         </a>
       </div>
 
-      <!-- Blog Link -->
       <div class="text-center fade-in">
-        <a 
+        <a
           href="https://lalo.lol/blog"
           target="_blank"
           rel="noopener noreferrer"
-          class="text-sm text-gray-500 hover:text-gray-900 transition-colors duration-300 tracking-wide"
-        >
-          Read my articles about web development
+          class="text-sm text-gray-500 hover:text-gray-900 transition-colors duration-300 tracking-wide">
+          Lee mis artículos sobre desarrollo web
         </a>
       </div>
-
     </div>
   </div>
 </MainLayout>
@@ -218,34 +213,35 @@ const examples = [
     }
   }
 
-  /* Staggered animation delays are handled inline */
+  /* Los retrasos de las animaciones escalonadas se manejan en línea */
 </style>
 
 <script>
-  // Add intersection observer for fade-in animations
+  // Añadir un observador de intersección para las animaciones de aparición
   const observerOptions = {
     threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
+    rootMargin: '0px 0px -50px 0px',
   };
 
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
+    entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.style.animationPlayState = 'running';
       }
     });
   }, observerOptions);
 
-  // Observe all fade-in elements
-  document.querySelectorAll('.fade-in').forEach(el => {
+  // Observar todos los elementos con la clase fade-in
+  document.querySelectorAll('.fade-in').forEach((el) => {
     el.style.animationPlayState = 'paused';
     observer.observe(el);
   });
 
-  // Start first elements immediately
+  // Iniciar los primeros elementos inmediatamente
   setTimeout(() => {
     document.querySelectorAll('.fade-in').forEach((el, index) => {
-      if (index < 3) { // First few elements
+      if (index < 3) {
+        // Los primeros elementos
         el.style.animationPlayState = 'running';
       }
     });
