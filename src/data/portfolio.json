@@ -50,8 +50,14 @@
           "Optimización SEO para mayor visibilidad en buscadores",
           "Marca visual profesional y de confianza"
         ],
+        "metrics": [
+          "First Contentful Paint (FCP): 0.7s",
+          "Largest Contentful Paint (LCP): 1.2s",
+          "Cumulative Layout Shift (CLS): 0.003"
+        ],
         "liveUrl": "https://hearinit.com",
-        "githubUrl": ""
+        "githubUrl": "",
+        "metricUrl": "https://pagespeed.web.dev/analysis/https-hearinit-com/ysrvdeph6p?form_factor=desktop"
       },
       {
         "title": "Paquete NPM",
@@ -69,8 +75,10 @@
           "Plantillas modernas y accesibles",
           "Incluye documentación pensada para desarrolladores"
         ],
+        "metrics": [],
         "liveUrl": "https://docs-azaldev-template.azaldev.com/",
-        "githubUrl": "https://www.npmjs.com/package/create-azaldev-template"
+        "githubUrl": "https://www.npmjs.com/package/create-azaldev-template",
+        "metricUrl": ""
       },
       {
         "title": "Bite & Smash",
@@ -85,8 +93,14 @@
           "Formulario de contacto integrado",
           "Sección de blog para novedades del estudio"
         ],
+        "metrics": [
+          "First Contentful Paint (FCP): 0.3s",
+          "Largest Contentful Paint (LCP): 0.5s",
+          "Cumulative Layout Shift (CLS): 0"
+        ],
         "liveUrl": "https://bite-and-smash.tunuevaweb.es/",
-        "githubUrl": "https://github.com/tunuevaweb/bite-and-smash"
+        "githubUrl": "https://github.com/tunuevaweb/bite-and-smash",
+        "metricUrl": "https://pagespeed.web.dev/analysis/https-bite-and-smash-tunuevaweb-es/fnvldvriqp?form_factor=desktop"
       },
       {
         "title": "Tu Nueva Web",
@@ -101,8 +115,15 @@
           "Registro e informes de errores",
           "Integración con APIs de terceros"
         ],
+        "metrics": [
+          "First Contentful Paint (FCP): 0.7s",
+          "Largest Contentful Paint (LCP): 0.7s",
+          "Cumulative Layout Shift (CLS): 0.024"
+        ],
+
         "liveUrl": "https://tunuevaweb.es",
-        "githubUrl": ""
+        "githubUrl": "",
+        "metricUrl": "https://pagespeed.web.dev/analysis/https-tunuevaweb-es/31yv2df4k7?form_factor=desktop"
       }
     ]
   },

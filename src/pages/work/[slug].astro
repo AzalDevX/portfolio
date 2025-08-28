@@ -43,12 +43,30 @@ if (!project) {
           {
             project.features && project.features.length > 0 && (
               <div class="project-detail-features fade-in">
-                <h3>Features:</h3>
+                <h3>Características:</h3>
                 <ul>
                   {project.features.map((feature) => (
                     <li>- {feature}</li>
                   ))}
                 </ul>
+              </div>
+            )
+          }
+
+          {
+            project.metrics && project.metrics.length > 0 ? (
+              <div class="project-detail-features fade-in">
+                <h3>Métricas:</h3>
+                <ul>
+                  {project.metrics.map((metric, index) => (
+                    <li key={index}> {metric}</li>
+                  ))}
+                </ul>
+              </div>
+            ) : (
+              <div class="project-detail-features fade-in">
+                <h3>Métricas:</h3>
+                <p>No hay métricas disponibles para este proyecto.</p>
               </div>
             )
           }
@@ -73,6 +91,17 @@ if (!project) {
                   rel="noopener noreferrer"
                   class="btn">
                   GitHub Repo
+                </a>
+              )
+            }
+            {
+              project.metricUrl && (
+                <a
+                  href={project.metricUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn">
+                  Más Métricas
                 </a>
               )
             }
