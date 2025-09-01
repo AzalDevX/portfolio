@@ -1,0 +1,181 @@
+---
+// CTA.astro
+---
+
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-content">
+      <h3 class="cta-title fade-in">
+        ¿Tu próximo proyecto web podría ser así de impactante?
+      </h3>
+      <p class="cta-description fade-in">
+        He ayudado a emprendedores y empresas a convertir sus ideas en webs que
+        realmente funcionan y venden. Tu proyecto merece la misma dedicación
+        personalizada.
+      </p>
+
+      <!-- Contenedor para el botón de Google Calendar -->
+      <div class="cta-calendar-container fade-in">
+        <div id="cta-google-calendar-button"></div>
+      </div>
+
+      <p class="cta-guarantee fade-in">
+        <span class="guarantee-item">Agenda fácil en 1 minuto</span>
+        <span class="guarantee-separator">•</span>
+        <span class="guarantee-item">Respondo en menos de 24h</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .cta-section {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .cta-content {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .cta-title {
+    font-size: 2.2em;
+    color: #333;
+    /* margin-bottom: 1.5rem; */
+    /* font-weight: 600; */
+    line-height: 1.3;
+
+    /* font-size: 4rem; */
+    font-weight: 300;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+  }
+
+  .cta-description {
+    font-size: 1.15em;
+    color: #555;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+  }
+
+  .cta-calendar-container {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .cta-guarantee {
+    color: #666;
+    font-size: 0.9em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .guarantee-separator {
+    color: #ccc;
+  }
+
+  .guarantee-item {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+
+  @media (max-width: 768px) {
+    .cta-section {
+      padding: 4rem 0;
+    }
+
+    .cta-title {
+      font-size: 1.8em;
+    }
+
+    .cta-description {
+      font-size: 1.05em;
+    }
+
+    .cta-guarantee {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .guarantee-separator {
+      display: none;
+    }
+  }
+</style>
+
+<!-- Google Calendar Appointment Scheduling para CTA -->
+<script>
+  (function () {
+    window.addEventListener('load', function () {
+      // Inicializar el botón de Google Calendar para el CTA
+      calendar.schedulingButton.load({
+        url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1QF1BIcez4Jt9OWjC8hrZd7a34UfemQncXGpb1P-g7RRPvegXfnJFlihzR-x_ujcx68apg_LlY?gv=true',
+        color: '#333333',
+        label: 'Hablemos de tu proyecto',
+        target: document.getElementById('cta-google-calendar-button'),
+      });
+
+      // Aplicamos estilos personalizados después de que el botón se genere
+      setTimeout(() => {
+        const container = document.getElementById('cta-google-calendar-button');
+        if (container && container.nextElementSibling) {
+          const button = container.nextElementSibling;
+
+          // Estilos base aplicados directamente en línea
+          button.style.backgroundColor = 'transparent';
+          button.style.color = '#333';
+          button.style.border = '1px solid #e0e0e0';
+          button.style.padding = '18px 40px'; // Ligeramente más grande para el CTA
+          button.style.fontSize = '1em';
+          button.style.textDecoration = 'none';
+          button.style.display = 'inline-block';
+          button.style.transition = 'all 0.3s ease';
+          button.style.borderRadius = '0';
+          button.style.cursor = 'pointer';
+          button.style.fontFamily = 'inherit';
+          button.style.fontWeight = '500'; // Un poco más bold para el CTA
+          button.style.letterSpacing = '0.5px';
+          button.style.minWidth = '220px'; // Más ancho para el CTA
+          button.style.textAlign = 'center';
+
+          // Eventos para hover effect
+          button.addEventListener('mouseenter', () => {
+            button.style.backgroundColor = '#f8f8f8';
+            button.style.borderColor = '#333';
+            button.style.color = '#000';
+            button.style.transform = 'translateY(-2px)';
+            button.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.1)';
+          });
+
+          button.addEventListener('mouseleave', () => {
+            button.style.backgroundColor = 'transparent';
+            button.style.borderColor = '#e0e0e0';
+            button.style.color = '#333';
+            button.style.transform = 'none';
+            button.style.boxShadow = 'none';
+          });
+
+          button.addEventListener('mousedown', () => {
+            button.style.transform = 'translateY(0)';
+            button.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.1)';
+          });
+
+          button.addEventListener('mouseup', () => {
+            if (button.matches(':hover')) {
+              button.style.transform = 'translateY(-2px)';
+              button.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.1)';
+            }
+          });
+        }
+      }, 300); // Esperamos 300ms para que el botón se genere
+    });
+  })();
+</script>
