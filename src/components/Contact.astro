@@ -18,6 +18,16 @@ const { contact, personal } = portfolioData;
           <div id="google-calendar-button"></div>
         </div>
 
+        <!-- Texto alternativo para el calendario -->
+        <p class="calendar-fallback fade-in text-xs">
+          Si no ves correctamente el contenido,
+          <a
+            href="https://lalo.lol/reservas"
+            target="_blank"
+            class="fallback-link">haz click aquí</a
+          >.
+        </p>
+
         <div class="contact-social fade-in">
           <a href={personal.social.linkedin} target="_blank" class="social-link"
             >LinkedIn</a
@@ -55,9 +65,27 @@ const { contact, personal } = portfolioData;
   }
 
   .google-calendar-container {
-    margin-bottom: 4rem;
+    margin-bottom: 1rem; /* Reducido para dar espacio al texto alternativo */
     display: flex;
     justify-content: flex-start;
+  }
+
+  /* Estilos para el texto alternativo del calendario */
+  .calendar-fallback {
+    color: #888;
+    margin-bottom: 3rem;
+    text-align: left;
+  }
+
+  .fallback-link {
+    color: #666;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+  }
+
+  .fallback-link:hover {
+    color: #333;
+    text-decoration: none;
   }
 
   .contact-social {
@@ -79,7 +107,12 @@ const { contact, personal } = portfolioData;
   @media (max-width: 768px) {
     .google-calendar-container {
       justify-content: center;
-      margin-bottom: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .calendar-fallback {
+      text-align: center;
+      margin-bottom: 2rem;
     }
 
     .contact-social {
